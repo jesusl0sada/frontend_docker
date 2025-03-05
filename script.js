@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const moviesList = document.getElementById("movies-list");
 
-    fetch("http://3.87.222.128:3000/api/movies") // IP del backend DIRECTAMENTE
+    fetch("http://3.87.222.128:3000/api/movies") // Usa la IP del backend
         .then(response => {
             if (!response.ok) {
                 throw new Error("Error al obtener los datos");
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
         })
         .then(data => {
-            console.log("📌 Datos recibidos:", data); // Verificar que llegan datos al frontend
+            console.log("📌 Datos recibidos:", data);
             moviesList.innerHTML = ""; // Limpiar contenido anterior
             data.forEach(movie => {
                 const li = document.createElement("li");
