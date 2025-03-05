@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const moviesList = document.getElementById("movies-list");
 
-    fetch("http://balanceador-docker-670246088.us-east-1.elb.amazonaws.com/api/movies")
+    fetch("http://3.87.222.128:3000/api/movies")
         .then(response => {
             if (!response.ok) {
                 throw new Error("Error al obtener los datos");
